@@ -181,7 +181,7 @@ assembly <- function(org_assembly = c("hg19",
   
   genome(myses) <- types[index, 2]
   
-  data <- getTable(ucscTableQuery(myses, track = types[index, 4]))
+  data <- getTable(ucscTableQuery(myses, table = types[index, 10]))
   data <- data[, as.double(types[index, 5:9])]
     
   colnames(data) <- c('chr', 'strand', 'start', 'end', 'symbol')
